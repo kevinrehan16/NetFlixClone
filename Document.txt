@@ -26,6 +26,12 @@
 -nodemon
 
 
+###A.I GEMINI RECOMMENDATION MOVIE API
+https://aistudio.google.com/app/prompts/new_chat
+
 @@@DEPLOYED IN RENDER@@@
 - STATIC SITE for my frontend
 - Web Service for my backend
+
+URL FRONTEND IN RENDER = https://netflixclone-1-w8fm.onrender.com/
+URL BACKEND IN RENDER = https://netflixclone-9513.onrender.com/

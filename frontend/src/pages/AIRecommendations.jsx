@@ -88,14 +88,14 @@ const AIRecommendations = () => {
     }
     setIsLoading(true);
 
-    const userPrompt = "Give me 10 movie titles released date 2024. Again movie titles only. No comments, No message, No special characters, No numbers, make it an array result for example: ['Movie Title 1', 'Movie Title 2', 'Movie Title 3',...until, 'Movie Title 10']. no other word, only the example result that I want.";
+    const userPrompt = "Give me 10 movie titles that meet the following criteria: Language: "+inputs['language']+", Decade: "+inputs['decade']+", Genre: "+inputs['genre']+", Length: "+inputs['length']+", Mood: "+inputs['mood']+". Again return only the movie titles. No comments, No message, no explanations, no extra text, No special characters, No numbers. Make the result an array format for example: ['Movie Title 1', 'Movie Title 2', 'Movie Title 3',...until, 'Movie Title 10']. no other word, only the example result that I want.";
 
     const result = await getAIRecommendation(userPrompt);
     setIsLoading(false);
     if(result){
       try {
         setRecommendation(JSON.parse(result.replace(/'/g, '"')));
-        // console.log(recommendation);
+        console.log(recommendation);
       } catch (error) {
         console.log(error);
       }

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Routes, Route } from 'react-router'
+import { Routes, Route, useLocation } from 'react-router'
 import Navbar from './components/Navbar'
 import Homepage from './pages/Homepage'
 import Moviepage from './pages/Moviepage'
@@ -12,6 +12,7 @@ import { useAuthStore } from './store/authStore'
 const App = () => {
 
   const {fetchUser, fetchingUser} = useAuthStore();
+  const location = useLocation(); //It will force the page to load again, even if it's the same URL.
 
   useEffect(() => {
     fetchUser();
@@ -31,7 +32,7 @@ const App = () => {
         <Route path={"/movie/:id"} element={<Moviepage />} />
         <Route path={"/signin"} element={<SignIn />} />
         <Route path={"/signup"} element={<SignUp />} />
-        <Route path={"/ai-recommendations"} element={<AIRecommendations />} />
+        <Route path={"/ai-recommendations"} element={<AIRecommendations key={location.key} />} />
       </Routes>
     </div>
   )
