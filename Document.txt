@@ -1,0 +1,26 @@
+@@@TECHSTACK@@@
+-NODEJS
+-MONGODB
+-REACT
+
+***NPM INSTALLED***
+###FRONTEND
+-@tailwindcss/vite
+-axios
+-lucide-react
+-react
+-react-dom
+-react-hot-toast
+-react-router
+-swiper
+-zustand
+
+###BACKEND
+-bcryptjs
+-cookie-parser
+-cors
+-dotenv
+-express
+-jsonwebtoken
+-mongoose
+-nodemon
