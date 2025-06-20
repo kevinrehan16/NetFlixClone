@@ -24,3 +24,8 @@
 -jsonwebtoken
 -mongoose
 -nodemon
+
+
+@@@DEPLOYED IN RENDER@@@
+- STATIC SITE for my frontend
+- Web Service for my backend
